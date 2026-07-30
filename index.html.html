@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Adriel Elivo — Creative Designer</title>
+<meta name="description" content="Portafolio y contacto de Adriel Elivo — Diseñador Creativo, Santo Domingo.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#080808;
+  --fg:#f0ece4;
+  --gray:#8c8c8c;
+  --mid:#161616;
+  --border:#252525;
+  --accent:#ff5c1a;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:'DM Sans',sans-serif;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  padding:32px 20px 24px;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  top:-15%;left:50%;
+  width:340px;height:340px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(255,92,26,.16) 0%,transparent 70%);
+  pointer-events:none;
+  z-index:0;
+}
+
+header{
+  position:relative;z-index:1;
+  text-align:center;
+  padding:18px 0 8px;
+}
+.logo{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2.2rem;
+  letter-spacing:.14em;
+}
+.logo span{color:var(--accent);}
+.role{
+  margin-top:8px;
+  font-size:.78rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gray);
+}
+
+main{
+  position:relative;z-index:1;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:14px;
+  max-width:420px;
+  width:100%;
+  margin:0 auto;
+  padding:20px 0;
+}
+
+.link-btn{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:20px 22px;
+  min-height:66px;
+  background:var(--mid);
+  border:1px solid var(--border);
+  border-radius:4px;
+  color:var(--fg);
+  text-decoration:none;
+  font-size:1rem;
+  font-weight:500;
+  transition:border-color .25s, transform .15s;
+}
+.link-btn:active{transform:scale(.98);}
+.link-btn:hover{border-color:var(--accent);}
+.link-icon{
+  font-size:1.3rem;
+  flex-shrink:0;
+  width:26px;
+  text-align:center;
+}
+.link-arrow{
+  margin-left:auto;
+  color:var(--accent);
+  font-size:1.1rem;
+}
+
+/* Behance como CTA principal, destacado */
+.link-btn.primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+.link-btn.primary .link-arrow{color:#fff;}
+.link-btn.primary:hover{box-shadow:0 10px 26px rgba(255,92,26,.3);}
+
+footer{
+  position:relative;z-index:1;
+  text-align:center;
+  padding-top:20px;
+  color:var(--gray);
+  font-size:.72rem;
+  letter-spacing:.08em;
+}
+footer span{color:var(--accent);}
+
+@media(min-width:520px){
+  body{padding:56px 20px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ADRIEL<span>.</span>ELIVO</div>
+  <div class="role">Creative Designer — Santo Domingo</div>
+</header>
+
+<main>
+  <a class="link-btn primary" href="https://www.behance.net/adrielelivo1/projects" target="_blank" rel="noopener">
+    <span class="link-icon">🎨</span>
+    <span>Ver portafolio en Behance</span>
+    <span class="link-arrow">↗</span>
+  </a>
+
+  <a class="link-btn" href="https://wa.me/18293875864" target="_blank" rel="noopener">
+    <span class="link-icon">💬</span>
+    <span>Escríbeme por WhatsApp</span>
+    <span class="link-arrow">↗</span>
+  </a>
+
+  <a class="link-btn" href="mailto:elivoadriel@gmail.com">
+    <span class="link-icon">✉</span>
+    <span>elivoadriel@gmail.com</span>
+    <span class="link-arrow">↗</span>
+  </a>
+</main>
+
+<footer>
+  © 2026 — <span>ADRIEL.ELIVO</span>
+</footer>
+
+</body>
+</html>
